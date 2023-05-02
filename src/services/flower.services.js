@@ -20,4 +20,5 @@ class FlowerDataService {
   }
 }
 
-export default new FlowerDataService();
+const FDS = new  FlowerDataService();
+export default FDS();
