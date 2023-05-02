@@ -21,4 +21,4 @@ class FlowerDataService {
 }
 
 const FDS = new  FlowerDataService();
-export default FDS();
+export default FDS;
