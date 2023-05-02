@@ -37,6 +37,7 @@ export default class FlowerList extends Component {
                 title: data.title,
                 description: data.description,
                 published: data.published,
+                url: data.url
             });
         });
 
@@ -66,7 +67,7 @@ export default class FlowerList extends Component {
         return (
             <div className="list row">
                 <div className="col-md-6">
-                    <h4>Tutorials List</h4>
+                    <h4>Listado de Flores</h4>
 
                     <ul className="list-group">
                         {tutorials &&
@@ -90,7 +91,7 @@ export default class FlowerList extends Component {
                     ) : (
                         <div>
                             <br />
-                            <p>Please follow the Tutorial...</p>
+                            <p>Please click on a Flower...</p>
                         </div>
                     )}
                 </div>
