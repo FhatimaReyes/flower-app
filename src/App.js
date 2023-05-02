@@ -12,13 +12,13 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/tutorials" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             Catalogo de Flores
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/tutorials"} className="nav-link">
-                Tutorials
+              <Link to={"/"} className="nav-link">
+                List
               </Link>
             </li>
             <li className="nav-item">
@@ -30,7 +30,7 @@ class App extends Component {
         </nav>
 
         <div className="container mt-3">
-          <h2>React Firestore CRUD</h2>
+          <h2>Flower CRUD</h2>
           <Routes>
             <Route path="/" element={<FlowerList/>} />
             <Route path="add" element={<AddFlower/>} />
