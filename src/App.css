@@ -13,19 +13,27 @@
   }
 }
 
+.comment-form textarea {
+  margin-bottom: 10px;
+  height: 100px;
+  resize: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #ebeb37;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(96, 131, 60);
 }
 
 .App-link {
-  color: #3498ca;
+  color: #2a80ac;
   /* color: #61dafb; */
 }
 
