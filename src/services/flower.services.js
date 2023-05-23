@@ -20,5 +20,5 @@ class FlowerDataService {
   }
 }
 
-const FDS = new  FlowerDataService();
-export default FDS();
+// eslint-disable-next-line 
+export default new FlowerDataService();
