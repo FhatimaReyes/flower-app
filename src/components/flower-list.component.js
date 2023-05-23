@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import FlowerDataService from "../services/flower.services";
 import Flower from "./flower.component";
+import Reactions from "./reactions.component";
+import CommentBox from "./comments.component";
 
 export default class FlowerList extends Component {
     constructor(props) {
@@ -62,27 +64,39 @@ export default class FlowerList extends Component {
 
 
     render() {
-      const { tutorials, currentTutorial, currentIndex } = this.state;
+        const { tutorials, currentTutorial, currentIndex } = this.state;
 
         return (
-            <div className="list row">
-                <div className="col-md-6">
-                    <h4>Listado de Flores</h4>
+            <div className="list-row">
+                <div className="col-md-6 bg-white">
+                    <h4>Lista de Flores</h4>
 
                     <ul className="list-group">
                         {tutorials &&
                             tutorials.map((tutorial, index) => (
                                 <li
-                                    className={"list-group-item " + (index === currentIndex ? "active" : "")}
+                                    className={"list-group-item" + (index === currentIndex ? "active" : "")}
                                     onClick={() => this.setActiveTutorial(tutorial, index)}
                                     key={index}
                                 >
                                     {tutorial.title}
+                                    <tr>
+                                        {tutorial.description}
+                                    </tr>
+                                    <img src={tutorial.url} width="540" height="280" alt=""/>
+                                    <tr>
+                                        <Reactions></Reactions>
+                                    </tr>
+                                    <tr>
+                                        <CommentBox></CommentBox>
+                                    </tr>
+
+
                                 </li>
                             ))}
                     </ul>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 bg-white" >
                     {currentTutorial ? (
                         <Flower
                             tutorial={currentTutorial}
@@ -98,6 +112,4 @@ export default class FlowerList extends Component {
             </div>
         );
     }
-   
-  
 }
