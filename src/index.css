@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.contenedor h1{
+  color: var(--primary);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  font-family: 'Lobster', cursive;
+}
+
+.contenedor{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  min-height: 100vh;
+  margin-top: -286px;
+  justify-content: 5px;
+}
+.contenedor2{  
+  display: flex;
+  justify-content: center;
+  margin-top: -400px;
+}
+.contenedor3{  
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}

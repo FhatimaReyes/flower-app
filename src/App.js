@@ -3,7 +3,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import { Routes, Route, Link } from "react-router-dom";
 import React, {Component} from "react";
-
+import Login from './components/Login';
 import AddFlower from "./components/add-flower.component";
 import FlowerList from "./components/flower-list.component";
 
@@ -28,10 +28,11 @@ class App extends Component {
             </li>
           </div>
         </nav>
-
         <div className="container mt-3">
           <h2>Flower CRUD</h2>
           <Routes>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/login" element={<Login/>}/>
             <Route path="/" element={<FlowerList/>} />
             <Route path="add" element={<AddFlower/>} />
           </Routes>
