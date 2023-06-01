@@ -26,6 +26,7 @@ const CommentsComponent = ({ id }) => {
   };
 
   const comment = (e, status) => {
+    fetchComments();
     const user = localStorage.getItem('email');
     const data = {
       userId: user,
@@ -39,7 +40,8 @@ const CommentsComponent = ({ id }) => {
   };
 
   return (
-    <div className="comments-section">
+    <div className="comments-section"
+    onMouseOver={fetchComments}>
       <h4>Comments</h4>
       <div className="form-group">
         <label htmlFor="comment-input">Leave a comment:</label>
